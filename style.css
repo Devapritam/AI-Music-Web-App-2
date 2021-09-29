@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(background.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 600px;
+}
+
+.heading {
+    margin-top: 20px;
+    width: 95%;
+    box-shadow: 0 5px 20px rgb(0 0 0 / 80%);
+    border: none;
+    transition: background 0.5s ease, all 0.5s ease;
+    padding-bottom: 25px;
+    box-sizing: border-box;
+}
+
+.heading:hover {
+    background: #00d6e6;
+    border: none !important;
+    box-shadow: 0 5px 20px rgb(0 0 0 / 80%);
+    transform: translateY(-5px);
+}
+
+.heading p {
+    font-size: 23px;
+    margin-top: 10px;
+    font-weight: bolder;
+    white-space: pre-line;
+}
+
+.heading_div {
+    float: none;
+    background-color: #fff;
+    color: #000;
+    padding: 0 20px 20px 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px rgb(0 0 0 / 80%);
+    transition: transform 0.5s ease;
+    font-size: 16px;
+    font-weight: bolder;
+    white-space: pre-line;
+    box-sizing: border-box;
+}
+
+.heading_div:hover {
+    transform: translateY(-5px);
+}
+
+.speed_btn {
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.8);
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 7px 20px;
+    border: none;
+    transition: 0.5s;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.speed_btn:hover {
+    background: rgb(255, 8, 0);
+    transform: translateY(-5px);
+}
+
+canvas {
+    border: 5px solid #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 #00d6e6;
+    margin-top: 150px;
+}
+
+.copy_right_footer {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: bolder;
+    font-weight: 400;
+    color: black;
+    /* font-family: 'Courier New', Courier, monospace !important; */
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.8);
+    z-index: 1000;
+}
