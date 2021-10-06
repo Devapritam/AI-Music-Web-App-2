@@ -5,7 +5,9 @@ leftWristY = 0;
 rightWristX = 0;
 rightWristY = 0;
 leftWristScore = 0;
+rightWristScore = 0;
 musicStatus1 = "";
+musicStatus2 = "";
 
 function preload() {
     song1 = loadSound("Unstoppable.mp3");
@@ -37,9 +39,10 @@ function gotPoses(results) {
         rightWristY = results[0].pose.rightWrist.y;
 
         leftWristScore = results[0].pose.keypoints[9].score;
+        rightWristScore = results[0].pose.keypoints[9].score;
 
         console.log("leftWristX = " + leftWristX + " leftWristY = " + leftWristY + " rightWristX = " + rightWristX + " rightWristY = " + rightWristY);
-        console.log("leftwristScore = " + leftWristScore);
+        console.log("rightWristScore = " + rightWristScore + " lefWristScore = " + leftWristScore);
     }
 }
 
@@ -51,12 +54,23 @@ function draw() {
 
     musicStatus1 = song1.isPlaying();
 
-    if (leftWristScore >= 0.1) {
+    if (leftWristScore >= 0.001) {
         circle(leftWristX, leftWristY, 20);
         song2.stop();
         if (musicStatus1 == false) {
             song1.play();
             document.getElementById("songName").innerHTML = "Song Name - Unstoppable";
+        }
+    }
+
+    musicStatus2 = song2.isPlaying();
+
+    if (rightWristScore >= 0.001) {
+        circle(rightWristX, rightWristY, 20);
+        song1.stop();
+        if (musicStatus2 == false) {
+            song2.play();
+            document.getElementById("songName").innerHTML = "Song Name - Harry Potter";
         }
     }
 }
